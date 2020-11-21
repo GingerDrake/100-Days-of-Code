@@ -1,0 +1,21 @@
+#1. Create a greeting for your program.
+print("Welcome to the Band Name Generator!")
+
+#2. Ask the user for the city that they grew up in.
+city = input("What city did you grow up in?\n")
+
+
+#3. Ask the user for the name of a pet.
+pet = input("What is your pet's name?\n")
+
+#4. Combine the name of their city and pet and show them their band name.
+print("Your new bandname couldd be: " + str(city.title()) + " " + str(pet.title()))
+
+#5. Make sure the input cursor shows on a new line, see the example at:
+#   https://band-name-generator-end.appbrewery.repl.run/
+
+# This is the project from the Day 1 challenge at "https://www.udemy.com/course/100-days-of-code/"
+# A simple Band Name generator using input functions and print statements. 
+# I allowed myself to go a little extra and cast the content as strings and use a .title() method.
+# The purpose is to ensure the code doesn't break if the user puts in London and 97, which would give an error
+# As Python cannot concatenate a string and an integer. The title method will make the first letter uppercase, used purely for aesthetics reasons.
