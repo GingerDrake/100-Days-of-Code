@@ -1,0 +1,22 @@
+#If the bill was $150.00, split between 5 people, with 12% tip. 
+#Each person should pay (150.00 / 5) * 1.12 = 33.6
+#Format the result to 2 decimal places = 33.60
+#Tip: You might need to do some research in Google to figure out how to do this.
+
+print("Welcome to the tip calculator.")
+Bill = input("What was the total bill? $")
+
+Tip = input("What percentage tip would you like to give? 10, 12, or 15? ")
+
+People = input("How many people to split the bill? ")
+
+Result = (float(Bill)/int(People)) * (1 + (float(Tip)/100))
+Result = round(Result, 2)
+
+print(f"Each person should pay: ${Result}")
+
+
+# It could probably have been made a bit prettier but it does the job just fine. 
+# The 'biggest' issues I had was that I had to cast the inputs as ints / floats, 
+# and initially I forgot to make the tip a percentage number - instead i multiplied it with the split bill. Oops.
+# It works as it is here, however.
