@@ -1,0 +1,69 @@
+import random
+
+rock = '''
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+'''
+
+paper = '''
+    _______
+---'   ____)____
+          ______)
+          _______)
+         _______)
+---.__________)
+'''
+
+scissors = '''
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+'''
+
+# List of 3 numbers.
+num_list = [rock, paper, scissors] # 0, 1, 2 respectively
+
+
+# Player input
+player_choice = input("Type 0 for rock, 1 for paper, 2 for scissors\n")
+player_choice = int(player_choice)
+
+
+# Computer random choice
+computer_choice = random.randint(0, 2)
+
+# Show the picks and make the "if"-decision-making for who wins
+if player_choice >= 0 and player_choice <= 2:
+  print(f"You picked: {num_list[player_choice]}")
+  print(f"Computer picked: {num_list[computer_choice]}")
+  if player_choice == 0:
+    if computer_choice == 0:
+      print("Draw!")
+    elif computer_choice == 1:
+      print("You lose!")
+    else:
+      print("You win!")
+  elif player_choice == 1:
+    if computer_choice == 0:
+      print("You win!")
+    elif computer_choice == 1:
+      print("Draw!")
+    else:
+      print("You lose!")
+  else:
+    if computer_choice == 0:
+      print("You lose!")
+    elif computer_choice == 1:
+      print("You win!")
+    else:
+      print("Draw!")
+
+else:
+  print("please pick a number between 0 and 2")
