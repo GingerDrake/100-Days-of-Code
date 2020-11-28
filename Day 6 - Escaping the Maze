@@ -1,0 +1,18 @@
+# This is a new challenge! The code is posted below, but is actually used on this website: https://reeborg.ca/reeborg.html?lang=en&mode=python&menu=worlds%2Fmenus%2Freeborg_intro_en.json&name=Maze&url=worlds%2Ftutorial_en%2Fmaze1.json
+# The point of the code is to make the robot navigate a maze from where ever it is, to the end point without walking into walls or getting stuck.
+
+def turn_right():
+    turn_left()
+    turn_left()
+    turn_left()
+
+
+while not at_goal():
+    if wall_on_right():
+        if wall_in_front():
+            turn_left()
+        elif front_is_clear():
+            move()
+    elif not wall_on_right():
+        turn_right()
+        move()
